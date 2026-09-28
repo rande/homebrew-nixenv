@@ -14,8 +14,8 @@
 class Nixenv < Formula
   desc "Per-project dev containers sharing one pinned Nix store"
   homepage "https://github.com/rande/nixenv"
-  url "https://github.com/rande/nixenv/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "6d96742a2abf3bca18df71e0b97336ac3cae6b5787841a9d8a15f00787923244"
+  url "https://github.com/rande/nixenv/archive/refs/tags/v0.2.0.tar.gz"
+  sha256 "8297dcf90fd61a59fb182fd2f5bf33a9ea2a8c5a57fb7c91e74208acc7835db7"
   license "GPL-3.0-or-later"
   head "https://github.com/rande/nixenv.git", branch: "main"
 
@@ -41,9 +41,8 @@ class Nixenv < Formula
       (slow once, then shared by every project):
         nixenv build
 
-      This release's templates are installed locally. To use them instead of
-      fetching from GitHub — pinning templates to the nixenv version you have:
-        export TEMPLATE_BASE="file://#{opt_pkgshare}/templates"
+      This release's templates are installed locally and used automatically,
+      so `init --template=<name>` matches the nixenv version you have.
     EOS
   end
 
